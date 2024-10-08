@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {  
+    /* template root */
+    --wh: #fff;
+    --dark: #000;
+    --bg: #ffffff15;
+    --e: #0012FB0C;
+    --bbg: #0039F920;
+    --c: #1C6BFE8D;
+    --a: #0062FF;
+    --d: #85B6FF;
+    --rbg: #07030308;
+    --ra: #ef0000;
+    --rc: #FD00004D; 
+    --rd: #FF4232BC;
+    --gbg:#00FB000C;
+    --ga: #2EFE29F7;
+    --gc: #25FD1B4F;
+    --gd: #060e06a8;/* copy shift + alt + down */
+}
+
+@font-face {
+    font-family: 'Anurati';
+    src: url(Anurati.otf);
+}
+nav {
+    margin: 0 0 20px 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    font-family: 'Anurati', sans-serif;
+    background: url(../background/classroom_night01.png);
+    background-position: top;
+    background-size: cover;
+    color: var(--wh);
+
+}
+
+main{ 
+    display: grid;
+    background: var(--bg);
+    border-radius: 14px;
+    text-align: center;
+    height: auto;
+    width: 100%;
+    min-width: 300px;
+    max-width: 600px;
+    padding: 10px;
+    margin: 25px;
+
+    padding: auto;
+}
+.content {
+    margin: 10px 0 0px 0;
+}
+.profil {
+    margin: 10px 0 0 0;
+}
+.profil img {
+    cursor: default;
+    border: 2px solid var(--wh);
+    border-radius: 100%;
+
+    /* filter grayscale: membuat gambar menjadi gray */
+    /* filter: grayscale(100%); */ 
+    transition-duration: 0.9s;
+}
+.profil img:hover {
+    
+    filter: grayscale(0);
+    box-shadow: 0 0 10px var(--wh),
+                0 0 10px var(--wh),
+                0 0 20px var(--wh),
+                0 0 20px var(--wh);
+}
+.description {
+    cursor: default;
+    margin: 10px 0 ;
+    font-size: 1.2rem;
+}
+.link-bio  {
+    font-size: 1.5rem;
+    margin: 10px 0 0 0;
+    width: 100%;
+    height: auto;
+    /* background: var(--d); */
+    border-top: 3px solid var(--wh);
+}
+.card-link {
+    padding: 0 20px;
+}
+.card-link a {
+    cursor: default;
+    text-decoration: none;
+    color: var(--wh);
+    display: flex;
+    place-items: center;
+    width: 100%;
+    height: 4rem;
+    margin: 10px 0;
+    border: 2px solid var(--wh);
+    border-radius: 15px;
+    font-size: 1.3rem;
+    
+    transition-duration: 0.9s;
+}
+.card-link a:hover {
+    background: transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px #fff, 0 0 10px var(--wh);
+}
+.name-description {
+    flex: 1;
+}
+footer {
+    display: grid;
+    height: auto ;
+    padding: 10px;
+    background: var(--gd);
+}
+.icon {
+    padding: 8px;
+    cursor: pointer;
+}
+.icon i:hover {
+    text-shadow: 0 0 10px var(--wh);
+}
+    
+/* males nambahin nama margin padding: top right down left >w< */
