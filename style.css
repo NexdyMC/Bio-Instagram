@@ -38,7 +38,30 @@ body {
     background-position: top;
     background-size: cover;
     color: var(--wh);
+}
 
+video{
+    z-index: -1;
+    width: 500px;
+}
+.screen {
+    display: grid;
+    width: 100%;
+    height: 100%;
+}
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 main{ 
@@ -130,5 +153,6 @@ footer {
 .icon i:hover {
     text-shadow: 0 0 10px var(--wh);
 }
-    
+
+/* alasan kenapa margin dan padding nilainya: 10px 0 20px 0 */
 /* males nambahin nama margin padding: top right down left >w< */
