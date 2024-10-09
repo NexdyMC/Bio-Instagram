@@ -14,7 +14,7 @@ function tanggal() {
     const tanggal = document.getElementById("tanggal");
     const out = new Date();
     const haritext = ["minggu", "Senin", "Selasa", "Rabu", "Kamis", "jumat", "sabtu"];
-    const bulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "juli", "Agustus", "September", "October", "November", "desember"];
+    const bulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "juli", "Agustus", "September", "Oktober", "November", "desember"];
     const month = bulan[out.getMonth()];
     const hari = haritext[out.getDay()];
     const harinomer = String(out.getDate()).padStart(2, "0");
