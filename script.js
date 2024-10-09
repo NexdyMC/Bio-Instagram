@@ -12,6 +12,7 @@ description.innerHTML = ["<p>" + /// --------- DISINGKAT BIAR JELAS --------- //
 
 function tanggal() {
     const tanggal = document.getElementById("tanggal");
+    const out = new Date();
     const haritext = ["minggu", "Senin", "Selasa", "Rabu", "Kamis", "jumat", "sabtu"];
     const bulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "juli", "Agustus", "September", "October", "November", "desember"];
     const month = bulan[out.getMonth()];
@@ -22,11 +23,10 @@ function tanggal() {
     tanggal.textContent = hari + " " + harinomer + " " + month + " " + tahun ;
     tanggal.style.fontSize = '1.5rem' ;
 }
-setInterval(tanggal, 1000);
-tanggal();
 
 function clock() {
     const clock = document.getElementById("clock");
+    const out = new Date();
     const jam = String(out.getHours()).padStart(2, "0");
     const menit = String(out.getMinutes()).padStart(2, "0");
     const detik = String(out.getSeconds()).padStart(2, "0")
@@ -34,6 +34,8 @@ function clock() {
     clock.textContent = (jam + ':' + menit + ':' + detik);
     clock.style.fontSize = '1.5rem' ;
 }
+setInterval(tanggal, 1000);
 setInterval(clock, 1000);
+tanggal();
 clock();
 
