@@ -34,7 +34,6 @@ body {
     display: flex;
     justify-content: center;
     font-family: 'Anurati', sans-serif;
-    background: url(classroom_night01.png);
     background-position: top;
     background-size: cover;
     color: var(--wh);
