@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bio NexdyMC</title>
-    <link rel="stylesheet" href="style.css">
-    
-
- <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/4592f70558.js" crossorigin="anonymous"></script>
-    <link href="script.js">
+    <link rel="stylesheet" href="style.css">
     <style>
         
     </style>
 </head>
 <body>
+     <div class="background"> 
+         <video autoplay muted loop id="background-video">
+             <source src="hu-tao.mp4" type="video/mp4">
+         </video>
+     </div>
     <main>
         <nav>
             <div class="tanggal" id="tanggal"></div>
@@ -27,13 +29,11 @@
                 <img src="icon.png" alt="NexdyMC" width="120px">
                 <h1>NexdyMC</h1>
             </div>
-            <div class="description">
-                 <p></p>
-            </div> 
+            <div class="description"></div> 
             <div class="link-bio">
                 <h1>sosial</h1>
                 <div class="card-link">
-                    <a href="https://www.youtube.com/@Nexdy_MC" onclick="youtube()" target="_blank" >
+                    <a href="https://www.youtube.com/@Nexdy_MC" onclick="youtubeurl()" target="_blank" >
                         <div class="name-description">
                             <h2>Youtube</h2>
                         </div>
