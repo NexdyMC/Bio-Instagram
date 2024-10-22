@@ -1,34 +1,46 @@
+/// --- --------------------------------------------- --- ///
+/// --- semua codingan html dan css dipindahkan ke js --- ///
+/// --- --------------------------------------------- --- ///
 
-/// ---------------------------------------------- ///
-/// semua codingan html dan css dipindahkan ke js ///
-/// ---------------------------------------------- ///
 const youtubr = document.getElementById("Youtube");
 const instagram = document.getElementById("instagram");
 const Tiktok = document.getElementById("tiktok");
 const github = document.getElementById("github"); 
-const link = [('https://www.youtube.com/@Nexdy_MC'), ('https://www.instagram.com/nexdy_mc'),
+const linkk = [('https://www.youtube.com/@Nexdy_MC'), ('https://www.instagram.com/nexdy_mc'),
     ('https://www.tiktok.com/@wincraftmc?'), ('https://www.github.com/nexdymc') ];
     
-    // const linkyoutube = ('https://www.youtube.com/@Nexdy_MC');
-    // const linkinstagraam = ('https://www.instagram.com/nexdy_mc');
-    // const linktiktok = ('https://www.tiktok.com/@wincraftmc?');
-    // const linkgithub = ('https://www.github.com/nexdymc');
+    // const linkkyoutube = ('https://www.youtube.com/@Nexdy_MC');
+    // const linkkinstagraam = ('https://www.instagram.com/nexdy_mc');
+    // const linkktiktok = ('https://www.tiktok.com/@wincraftmc?');
+    // const linkkgithub = ('https://www.github.com/nexdymc');
     
 const description = document.querySelector(".description");
-description.innerHTML = ["<p>" + /// --------- DISINGKAT BIAR JELAS --------- ///
-        "Hai Nama ku NexdyMC aku seorang conten creator minecraft dan pembuat texture pack mini" 
-        + "</p> "];
+description.innerHTML = [
+    "<p>" + /// --------- DISINGKAT BIAR JELAS --------- ///
+        "Hai Nama ku NexdyMC aku seorang conten creator minecraft dan pembuat texture pack mini" +
+    "</p> "
+];
         description.style.fontSize = '1.3em';
         
 const copyright = document.getElementById("copyright");
-copyright.innerHTML = ["<h3>" +  /// --------- DISINGKAT BIAR JELAS --------- ///
-        "Versi 1.5 || By Web - NexdyMC || copyright &copyNexdyProjek 2024" 
-        + "</h3>"];
+copyright.innerHTML = [
+    "<h3>" +  /// --------- DISINGKAT BIAR JELAS --------- ///
+        "Versi 1.5 || By Web - NexdyMC || copyright &copyNexdyProjek 2024" +
+    "</h3>"
+];
+var target = ['_blank']
 
-youtubr.href = link[0] ;
-instagram.href = link[1] ;
-Tiktok.href = link[2] ;
-github.href = link[3] ;
+/// --- link Media Sharing Network --- ///
+youtubr.href = linkk[0] ;
+instagram.href = linkk[1] ;
+Tiktok.href = linkk[2] ;
+github.href = linkk[3] ;
+
+/// --- link Media target _blank --- /// 
+youtubr.target = '_blank';
+instagram.href.target = '_blank';
+Tiktok.target = '_blank' ;
+github.target = '_blank' ;
 
 function tanggal() {
     const out = new Date();
