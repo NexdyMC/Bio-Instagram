@@ -1,3 +1,36 @@
+const navLinks = document.querySelectorAll('.nav-item');
+const sections = document.querySelectorAll('.section-items');
+
+// navbar menu
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        const targetId = link.getAttribute('data-target');
+        const targetSection = document.getElementById(targetId);
+
+        // Efek fade out semua section
+        sections.forEach(s => {
+            s.style.opacity = '0';
+            s.style.transform = 'scale(0.8)';
+        });
+
+        // Tunggu animasi fade out selesai (500ms)
+        setTimeout(() => {
+            targetSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest',
+                inline: 'center'
+            });
+
+            // Munculkan kembali (fade in)
+            sections.forEach(s => {
+                s.style.opacity = '1';
+                s.style.transform = 'scale(1)';
+            });
+        }, 300);
+    });
+});
+
+// function tanggal 
 function tanggal() {
     const out = new Date();
     const tanggal = document.getElementById("tanggal");
@@ -15,6 +48,7 @@ function tanggal() {
 setInterval(tanggal, 1000);
 tanggal();
 
+// function waktu
 function clock() {
     const out = new Date();
     const clock = document.getElementById("clock");

@@ -94,11 +94,19 @@
         </section>
       
         <!-- section scroll : My Project -->
-        <section id="my-project" class="content-transition section-items min-w-96 px-4 py-6 opacity-100">
+        <section id="my-project" class="content-transition section-items min-w-96 max-h-[400px] px-4 py-6 opacity-100 overflow-auto">
           
           <!-- link project : cek server mc -->
-          <a href="#" class=" border-2 border-blue-600 rounded-xl bg-blue-600/20 hover:bg-blue-600/60 w-96 duration-300 " target="_blank">
-            <img src="image/web_cek_server.png" alt="" class="object-cover object-center mb-2" >
+          <a href="#" class="grid bg-blue-600/20 rounded-lg overflow-hidden duration-300 hover:scale-105" target="_blank">
+            <img src="image/web_cek_server.png" alt="" class="mb-2" >
+            <p class="text-lg text-left ml-2 mb-2">Cek Server Minecraft</p>
+          </a>
+          <a href="#" class="grid bg-blue-600/20 rounded-lg overflow-hidden duration-300 hover:scale-105" target="_blank">
+            <img src="image/web_cek_server.png" alt="" class="mb-2" >
+            <p class="text-lg text-left ml-2 mb-2">Cek Server Minecraft</p>
+          </a>
+          <a href="#" class="grid bg-blue-600/20 rounded-lg overflow-hidden duration-300 hover:scale-105" target="_blank">
+            <img src="image/web_cek_server.png" alt="" class="mb-2" >
             <p class="text-lg text-left ml-2 mb-2">Cek Server Minecraft</p>
           </a>
           
@@ -116,37 +124,5 @@
   
   <!-- script js -->
   <script src="script/script.js"></script>
-  <script>
-const navLinks = document.querySelectorAll('.nav-item');
-const sections = document.querySelectorAll('.section-items');
-
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        const targetId = link.getAttribute('data-target');
-        const targetSection = document.getElementById(targetId);
-
-        // Efek fade out semua section
-        sections.forEach(s => {
-            s.style.opacity = '0';
-            s.style.transform = 'scale(0.8)';
-        });
-
-        // Tunggu animasi fade out selesai (500ms)
-        setTimeout(() => {
-            targetSection.scrollIntoView({
-                behavior: 'smooth',
-                block: 'nearest',
-                inline: 'center'
-            });
-
-            // Munculkan kembali (fade in)
-            sections.forEach(s => {
-                s.style.opacity = '1';
-                s.style.transform = 'scale(1)';
-            });
-        }, 300);
-    });
-});
-  </script>
 </body>
 </html>
