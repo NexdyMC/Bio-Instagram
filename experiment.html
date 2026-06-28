@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .snap-x-mandatory { scroll-snap-type: x mandatory; }
+        .snap-center { scroll-snap-align: center; }
+        
+        /* Animasi Transisi */
+        .content-transition {
+            transition: all 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 h-screen overflow-hidden flex flex-col font-sans">
+
+    <nav class="flex-none flex justify-center gap-6 p-6 bg-white z-10">
+        <button class="nav-item font-bold text-gray-700 hover:text-blue-600 transition" data-target="home">HOME</button>
+        <button class="nav-item font-bold text-gray-700 hover:text-blue-600 transition" data-target="about">ABOUT</button>
+        <button class="nav-item font-bold text-gray-700 hover:text-blue-600 transition" data-target="media">MEDIA</button>
+        <button class="nav-item font-bold text-gray-700 hover:text-blue-600 transition" data-target="my-project">MY PROJECT</button>
+    </nav>
+
+    <main class="flex-1 flex items-center overflow-x-auto snap-x-mandatory no-scrollbar px-[calc(50vw-150px)]">
+        <!-- Tambahkan class 'content-transition' untuk efek animasi -->
+        <section id="home" class="content-transition snap-center min-w-[300px] min-h-[300px] mx-5 bg-white rounded-3xl shadow-lg flex items-center justify-center p-10 opacity-100">
+            <h1 class="text-2xl font-bold">HOME</h1>
+        </section>
+        <section id="about" class="content-transition snap-center min-w-[300px] min-h-[300px] mx-5 bg-white rounded-3xl shadow-lg flex items-center justify-center p-10 opacity-100">
+            <h1 class="text-2xl font-bold">ABOUT</h1>
+        </section>
+        <section id="media" class="content-transition snap-center min-w-[300px] min-h-[300px] mx-5 bg-white rounded-3xl shadow-lg flex items-center justify-center p-10 opacity-100">
+            <h1 class="text-2xl font-bold">MEDIA</h1>
+        </section>
+        <section id="my-project" class="content-transition snap-center min-w-[300px] min-h-[300px] mx-5 bg-white rounded-3xl shadow-lg flex items-center justify-center p-10 opacity-100">
+            <h1 class="text-2xl font-bold">MY PROJECT</h1>
+        </section>
+    </main>
+
+    <script>
+        const navLinks = document.querySelectorAll('.nav-item');
+        const sections = document.querySelectorAll('section');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                const targetId = link.getAttribute('data-target');
+                const targetSection = document.getElementById(targetId);
+
+                // Efek fade out semua section
+                sections.forEach(s => {
+                    s.style.opacity = '0';
+                    s.style.transform = 'scale(0.8)';
+                });
+
+                // Tunggu animasi fade out selesai (500ms)
+                setTimeout(() => {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'nearest',
+                        inline: 'center'
+                    });
+
+                    // Munculkan kembali (fade in)
+                    sections.forEach(s => {
+                        s.style.opacity = '1';
+                        s.style.transform = 'scale(1)';
+                    });
+                }, 300);
+            });
+        });
+    </script>
+</body>
+</html>

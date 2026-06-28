@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="https://kit.fontawesome.com/4592f70558.js" crossorigin="anonymous">
   <link rel="shortcut icon" type="x-icon" href="image/icon.png">
   <link rel="stylesheet" href="style/style.css">
+  <script src="script/tailwind.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     * {
       margin: 0;
@@ -20,60 +22,131 @@
       font-family: 'zh-cn';
       src: url(font/zh-cn.ttf);
     }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .snap-x-mandatory { scroll-snap-type: x mandatory; }
+    .snap-center { scroll-snap-align: center; }
+    
+    /* Animasi Transisi */
+    .content-transition {
+        transition: all 0.5s ease-in-out;
+    }
   </style>
 </head>
-<body>
-    <!-- background live-->
-  <div class="background">
-    <video muted loop autoplay id="bg-video">
-      <source src="video/hu-tao.mp4" type="video/mp4">
+<body class="flex justify-center align-center font-['zh-cn'] bg-[url('image/classroom.png), url(../image/background.png')] bg-cover bg-center text-white text-md cursor-[url('image/cursor.png'), auto]">
+    
+  <!-- background live-->
+  <div class="fixed top-0 w-screen h-screen overflow-hidden">
+    <video muted loop autoplay id="bg-video" class="">
+      <source src="video/klee.webm" type="video/mp4">
     </video>
   </div>
 
-  <main>
-    <nav>
-      <div class="tanggal" id="tanggal"></div>
-      <div class="clock" id="clock"></div>
-    </nav>
+  <section class="flex justify-center items-center h-screen">
 
-    <div class="content">
-      <div class="profil">
-        <img src="image/icon.png" alt="NexdyMC" width="120px">
-        <h1>NexdyMC</h1>
-      </div>
-      <div class="description"></div>
-      <div class="link-bio">
-        <h1>Sosial</h1>
-        <div class="card-link">
-          <a href="#" id="Youtube" target="_blank" >
-            <div class="name-description">
-              <h2>Youtube</h2>
-            </div>
-          </a>
-          <a href="#" id="instagram" target="_blank" >
-            <div class="name-description">
-              <h2>Instagram</h2>
-            </div>
-          </a>
-          <a href="#" id="tiktok" target="_blank">
-            <div class="name-description">
-              <h2>Tiktok</h2>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
+    <main class="border-2 border-blue-600   rounded-xl overflow-hidden text-center">
 
-    <footer>
-      <div class="icon" style="font-size: 2rem;">
-        <a href="#" id="github" style="color: #fff" target="_blank" >
-          <i class="bx bxl-github"></i>
-        </a>
-      </div>
-      <div id="copyright"></div>
-    </footer>
-  </main>
+      <!-- main : navbar -->
+      <nav class=" bg-blue-500/20">
+        <button class="nav-item px-4 py-2 text-white duration-300 hover:text-gray-300 hover:underline" data-target="home" >Home</a>
+        <button class="nav-item px-4 py-2 text-white duration-300 hover:text-gray-300 hover:underline" data-target="media" >Media</a>
+        <button class="nav-item px-4 py-2 text-white duration-300 hover:text-gray-300 hover:underline" data-target="my-project" >My Project</a>
+      </nav>
+      
+      <!-- container scroll -->
+      <div class="content flex w-96 overflow-hidden ">
 
+        <!-- section scroll : Home -->
+        <section id="home" class="content-transition section-items grid justify-items-center min-w-96 px-4 py-6 opacity-100">
+          <!-- card profile -->
+          <div class="bg-blue-600/20 border-2 border-blue-600 rounded-xl duration-300 p-4 hover:scale-105 hover:bg-blue-600/20 hover:bg-blue-600/40">
+            <img src="image/icon.png" alt="NexdyMC" width="120px" class="rounded-lg duration-300 hover:cursor-pointer">
+            <p class="mt-4 text-2xl">Nexdy</p>
+          </div>
+          <!-- <p class="text-2xl mb-2">Nexdy Experiment</p> -->
+          
+          <p class="max-w-96 text-lg mt-4 ">Coding, Creating, and Experiment 💻✨</p> 
+          <p class="max-w-96 text-sm mt-2 ">di sini aku berbagi hasil eksperimenku di dunia Minecraft dan proyek coding lainnya. </p>
+          <p class="max-w-96 text-sm mt-2 ">Let's build something fun! Eheh.. >w<</p>
+        </section>
+
+        <!-- section scroll : Media -->
+        <section id="media" class="content-transition section-items grid gap-2 min-w-96 px-4 py-6 opacity-100">
+          
+          <!-- link media : Youtube -->
+          <a href="https://www.youtube.com/@Nexdy_MC" class="h-16 p-4 text-center text-lg border-2 border-blue-600 rounded-xl bg-blue-600/20 hover:bg-blue-600/60 duration-300 " target="_blank">
+            Youtube
+          </a>
+          
+          <!-- link media : Tiktok -->
+          <a href="https://www.tiktok.com/@wincraftmc?" class="h-16 p-4 text-center text-lg border-2 border-blue-600 rounded-xl bg-blue-600/20 hover:bg-blue-600/60 duration-300 " target="_blank">
+            Tiktok
+          </a>
+          
+          <!-- link media : Instagram -->
+          <a href="https://www.instagram.com/nexdy_mc" class="h-16 p-4 text-center text-lg border-2 border-blue-600 rounded-xl bg-blue-600/20 hover:bg-blue-600/60 duration-300 " target="_blank">
+            Instagram
+          </a>
+          
+          <!-- link media : Github -->
+          <a href="https://www.github.com/nexdymc" class="h-16 p-4 text-center text-lg border-2 border-blue-600 rounded-xl bg-blue-600/20 hover:bg-blue-600/60 duration-300 " target="_blank">
+            Github
+          </a>
+        </section>
+      
+        <!-- section scroll : My Project -->
+        <section id="my-project" class="content-transition section-items min-w-96 px-4 py-6 opacity-100">
+          
+          <!-- link project : cek server mc -->
+          <a href="#" class=" border-2 border-blue-600 rounded-xl bg-blue-600/20 hover:bg-blue-600/60 w-96 duration-300 " target="_blank">
+            <img src="image/web_cek_server.png" alt="" class="object-cover object-center mb-2" >
+            <p class="text-lg text-left ml-2 mb-2">Cek Server Minecraft</p>
+          </a>
+          
+        </section>
+      
+      </div>
+      
+      <!-- main : footer -->
+      <footer class="bg-gray-600/20 p-2">
+        <a href="#" id="github" class="text-white text-2xl" target="_blank" ><i class="bx bxl-github"></i></a>
+        <p class="text-sm "> Versi 2.0 &copy; NexdyMC 2024</p>
+      </footer>
+    </main>
+  </section>
+  
+  <!-- script js -->
   <script src="script/script.js"></script>
+  <script>
+const navLinks = document.querySelectorAll('.nav-item');
+const sections = document.querySelectorAll('.section-items');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        const targetId = link.getAttribute('data-target');
+        const targetSection = document.getElementById(targetId);
+
+        // Efek fade out semua section
+        sections.forEach(s => {
+            s.style.opacity = '0';
+            s.style.transform = 'scale(0.8)';
+        });
+
+        // Tunggu animasi fade out selesai (500ms)
+        setTimeout(() => {
+            targetSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest',
+                inline: 'center'
+            });
+
+            // Munculkan kembali (fade in)
+            sections.forEach(s => {
+                s.style.opacity = '1';
+                s.style.transform = 'scale(1)';
+            });
+        }, 300);
+    });
+});
+  </script>
 </body>
 </html>
