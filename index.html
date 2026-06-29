@@ -6,18 +6,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="x-icon" href="image/icon.png">
   <title>NexdyMC</title>
+  <!-- link : icons -->
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
   <link rel="stylesheet" href="https://kit.fontawesome.com/4592f70558.js" crossorigin="anonymous">
-  <link rel="shortcut icon" type="x-icon" href="image/icon.png">
-  <link rel="stylesheet" href="style/style.css">
+  <!-- link : tailwind css -->
   <script src="script/tailwind.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
     @font-face {
       font-family: 'zh-cn';
       src: url(font/zh-cn.ttf);
@@ -32,40 +29,41 @@
     }
   </style>
 </head>
-<body class="flex justify-center align-center font-['zh-cn'] bg-[url('image/classroom.png), url(../image/background.png')] bg-cover bg-center text-white text-md cursor-[url('image/cursor.png'), auto]">
+<body class="h-[90vh] lg:h-screen overflow-hidden font-['zh-cn'] bg-[url('image/classroom.png), url(../image/background.png')] bg-cover bg-center text-white text-md">
     
   <!-- background live-->
-  <div class="fixed top-0 w-screen h-screen overflow-hidden">
-    <video muted loop autoplay id="bg-video" class="">
+  <div class="fixed top-0 w-screen h-screen">
+    <video muted loop autoplay id="bg-video" class="object-cover w-screen h-screen">
       <source src="video/klee.webm" type="video/mp4">
     </video>
   </div>
 
-  <section class="flex justify-center items-center h-screen">
+  <section class="grid justify-items-center items-center h-[90vh] md:h-screen">
 
-    <main class="border-2 border-blue-600   rounded-xl overflow-hidden text-center">
+    <main class="border-2 border-blue-600 rounded-xl overflow-hidden text-center z-10">
 
       <!-- main : navbar -->
       <nav class=" bg-blue-500/20">
-        <button class="nav-item px-4 py-2 text-white duration-300 hover:text-gray-300 hover:underline" data-target="home" >Home</a>
-        <button class="nav-item px-4 py-2 text-white duration-300 hover:text-gray-300 hover:underline" data-target="media" >Media</a>
-        <button class="nav-item px-4 py-2 text-white duration-300 hover:text-gray-300 hover:underline" data-target="my-project" >My Project</a>
+        <button class="nav-item px-4 py-2 text-white duration-300 hover:text-blue-300 hover:underline" data-target="home" >Home</a>
+        <button class="nav-item px-4 py-2 text-white duration-300 hover:text-blue-300 hover:underline" data-target="media" >Media</a>
+        <button class="nav-item px-4 py-2 text-white duration-300 hover:text-blue-300 hover:underline" data-target="my-project" >My Project</a>
       </nav>
       
-      <!-- container scroll -->
+      <!-- main : scroll -->
       <div class="content flex w-96 overflow-hidden ">
 
         <!-- section scroll : Home -->
         <section id="home" class="content-transition section-items grid justify-items-center min-w-96 px-4 py-6 opacity-100">
-          <!-- card profile -->
-          <div class="bg-blue-600/20 border-2 border-blue-600 rounded-xl duration-300 p-4 hover:scale-105 hover:bg-blue-600/20 hover:bg-blue-600/40">
-            <img src="image/icon.png" alt="NexdyMC" width="120px" class="rounded-lg duration-300 hover:cursor-pointer">
-            <p class="mt-4 text-2xl">Nexdy</p>
-          </div>
-          <!-- <p class="text-2xl mb-2">Nexdy Experiment</p> -->
           
+          <!-- profile -->
+          <div class="bg-blue-600/20 border-2 border-blue-600 rounded-lg duration-300 p-4 backdrop-blur hover:scale-105 hover:bg-blue-600/20 hover:bg-blue-600/40 active:scale-100">
+            <img src="image/profile.png" alt="NexdyMC" width="120px" class="rounded-xl duration-300 hover:cursor-pointer">
+            <p class="mt-4 text-2xl">NexdyMC</p>
+          </div>
+          
+          <!-- Description -->
           <p class="max-w-96 text-lg mt-4 ">Coding, Creating, and Experiment 💻✨</p> 
-          <p class="max-w-96 text-sm mt-2 ">di sini aku berbagi hasil eksperimenku di dunia Minecraft dan proyek coding lainnya. </p>
+          <p class="max-w-96 text-sm mt-2 ">berbagi hasil eksperimenku di dunia Minecraft dan proyek coding lainnya. </p>
           <p class="max-w-96 text-sm mt-2 ">Let's build something fun! Eheh.. >w<</p>
         </section>
 
@@ -73,52 +71,55 @@
         <section id="media" class="content-transition section-items grid gap-2 min-w-96 px-4 py-6 opacity-100">
           
           <!-- link media : Youtube -->
-          <a href="https://www.youtube.com/@Nexdy_MC" class="h-16 p-4 text-center text-lg border-2 border-blue-600 rounded-xl bg-blue-600/20 hover:bg-blue-600/60 duration-300 " target="_blank">
-            Youtube
-          </a>
+          <a href="https://www.youtube.com/@Nexdy_MC" class="h-16 p-4 text-center text-lg border-2 border-blue-600 rounded-lg bg-blue-600/20 duration-300 hover:bg-blue-600/60 hover:backdrop-blur" target="_blank">Youtube</a>
           
           <!-- link media : Tiktok -->
-          <a href="https://www.tiktok.com/@wincraftmc?" class="h-16 p-4 text-center text-lg border-2 border-blue-600 rounded-xl bg-blue-600/20 hover:bg-blue-600/60 duration-300 " target="_blank">
-            Tiktok
-          </a>
+          <a href="https://www.tiktok.com/@wincraftmc?" class="h-16 p-4 text-center text-lg border-2 border-blue-600 rounded-lg bg-blue-600/20 duration-300 hover:bg-blue-600/60 hover:backdrop-blur" target="_blank">Tiktok</a>
           
           <!-- link media : Instagram -->
-          <a href="https://www.instagram.com/nexdy_mc" class="h-16 p-4 text-center text-lg border-2 border-blue-600 rounded-xl bg-blue-600/20 hover:bg-blue-600/60 duration-300 " target="_blank">
-            Instagram
-          </a>
+          <a href="https://www.instagram.com/nexdy_mc" class="h-16 p-4 text-center text-lg border-2 border-blue-600 rounded-lg bg-blue-600/20 duration-300 hover:bg-blue-600/60 hover:backdrop-blur" target="_blank">Instagram</a>
           
           <!-- link media : Github -->
-          <a href="https://www.github.com/nexdymc" class="h-16 p-4 text-center text-lg border-2 border-blue-600 rounded-xl bg-blue-600/20 hover:bg-blue-600/60 duration-300 " target="_blank">
-            Github
-          </a>
+          <a href="https://www.github.com/nexdymc" class="h-16 p-4 text-center text-lg border-2 border-blue-600 rounded-lg bg-blue-600/20 duration-300 hover:bg-blue-600/60 hover:backdrop-blur" target="_blank">Github</a>
+
         </section>
       
         <!-- section scroll : My Project -->
-        <section id="my-project" class="content-transition section-items min-w-96 max-h-[400px] px-4 py-6 opacity-100 overflow-auto">
+        <section id="my-project" class="content-transition gap-4 grid grid-cols-2 grid-rows-none section-items min-w-96 max-h-[400px] px-4 py-6 opacity-100 overflow-auto">
           
-          <!-- link project : cek server mc -->
-          <a href="#" class="grid bg-blue-600/20 rounded-lg overflow-hidden duration-300 hover:scale-105" target="_blank">
-            <img src="image/web_cek_server.png" alt="" class="mb-2" >
-            <p class="text-lg text-left ml-2 mb-2">Cek Server Minecraft</p>
-          </a>
-          <a href="#" class="grid bg-blue-600/20 rounded-lg overflow-hidden duration-300 hover:scale-105" target="_blank">
-            <img src="image/web_cek_server.png" alt="" class="mb-2" >
-            <p class="text-lg text-left ml-2 mb-2">Cek Server Minecraft</p>
-          </a>
-          <a href="#" class="grid bg-blue-600/20 rounded-lg overflow-hidden duration-300 hover:scale-105" target="_blank">
-            <img src="image/web_cek_server.png" alt="" class="mb-2" >
-            <p class="text-lg text-left ml-2 mb-2">Cek Server Minecraft</p>
+          <!-- link project : Cek Server MC -->
+          <a href="#" class="grid p-2 justify-items-center bg-blue-600/20 border-2 border-blue-600 rounded-lg overflow-hidden backdrop-blur duration-300 hover:scale-105 active:scale-100">
+            <img src="image/icon.png" alt="" class="my-4" width="90" >
+            <p class="text-md text-left ml-2 mb-2">Cek Server MC</p>
           </a>
           
+          <!-- link project : Kalkulator Rp -->
+          <a href="#" class="grid p-2 justify-items-center bg-blue-600/20 border-2 border-blue-600 rounded-lg overflow-hidden backdrop-blur duration-300 hover:scale-105 active:scale-100">
+            <img src="image/icon.png" alt="" class="my-4" width="90" >
+            <p class="text-md text-left ml-2 mb-2">Kalkulator Rp</p>
+          </a>
+          
+          <!-- link project : Memori Phone -->
+          <a href="#" class="grid p-2 justify-items-center bg-blue-600/20 border-2 border-blue-600 rounded-lg overflow-hidden backdrop-blur duration-300 hover:scale-105 active:scale-100">
+            <img src="image/icon.png" alt="" class="my-4" width="90" >
+            <p class="text-md text-left ml-2 mb-2">Memori Phone</p>
+          </a>
+          
+          <!-- link project : Alphabet -->
+          <a href="#" class="grid p-2 justify-items-center bg-blue-600/20 border-2 border-blue-600 rounded-lg overflow-hidden backdrop-blur duration-300 hover:scale-105 active:scale-100">
+            <img src="image/icon.png" alt="" class="my-4" width="90" >
+            <p class="text-md text-left ml-2 mb-2">Alphabet</p>
+          </a>
+
         </section>
-      
       </div>
       
       <!-- main : footer -->
-      <footer class="bg-gray-600/20 p-2">
-        <a href="#" id="github" class="text-white text-2xl" target="_blank" ><i class="bx bxl-github"></i></a>
-        <p class="text-sm "> Versi 2.0 &copy; NexdyMC 2024</p>
+      <footer class="bg-gray-600/20 duration-300 p-2">
+        <a href="#" id="github" class="text-white text-2xl hover:text-blue-300" target="_blank" ><i class="bx bxl-github"></i></a>
+        <p class="text-sm "> V2.0 &copy;NexdyMC 2024</p>
       </footer>
+    
     </main>
   </section>
   
