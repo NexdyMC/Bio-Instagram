@@ -38,84 +38,91 @@
 
   <section class="grid justify-items-center items-center h-[90vh] md:h-screen">
 
-    <main class="border-2 border-blue-600 rounded-xl overflow-hidden text-center z-10">
+    <main class="overflow-hidden z-10 text-center rounded-xl border-2 border-blue-600">
 
       <!-- main : navbar -->
-      <nav class=" bg-blue-500/20">
-        <button class="nav-item px-4 py-2 text-white duration-300 hover:text-blue-300 hover:underline" data-target="home" >Home</a>
-        <button class="nav-item px-4 py-2 text-white duration-300 hover:text-blue-300 hover:underline" data-target="media" >Media</a>
-        <button class="nav-item px-4 py-2 text-white duration-300 hover:text-blue-300 hover:underline" data-target="my-project" >My Project</a>
+      <nav class="py-2 bg-blue-500/20">
+        <button class="px-4 py-2 text-white border-b-2 border-transparent duration-300 hover:border-blue-300 nav-item hover:text-blue-300" data-target="home" >Home</a>
+        <button class="px-4 py-2 text-white border-b-2 border-transparent duration-300 hover:border-blue-300 nav-item hover:text-blue-300" data-target="media" >Media</a>
+        <button class="px-4 py-2 text-white border-b-2 border-transparent duration-300 hover:border-blue-300 nav-item hover:text-blue-300" data-target="my-project" >My Project</a>
       </nav>
       
       <!-- main : scroll -->
-      <div class="content flex w-96 overflow-hidden ">
+      <div class="flex overflow-hidden w-96 content">
 
         <!-- section scroll : Home -->
-        <section id="home" class="content-transition section-items grid justify-items-center min-w-96 px-4 py-6 opacity-100">
+        <section id="home" class="grid justify-items-center px-4 py-6 opacity-100 content-transition section-items min-w-96">
           
           <!-- profile -->
-          <div class="bg-blue-600/20 border-2 border-blue-600 rounded-lg duration-300 p-4 backdrop-blur hover:scale-105 hover:bg-blue-600/20 hover:bg-blue-600/40 active:scale-100">
+          <div class="p-4 rounded-lg border-2 border-blue-600 backdrop-blur duration-300 bg-blue-600/20 hover:scale-105 hover:bg-blue-600/20 hover:bg-blue-600/40 active:scale-100">
             <img src="image/profile.png" alt="NexdyMC" width="120px" class="rounded-xl duration-300 hover:cursor-pointer">
             <p class="mt-4 text-2xl">NexdyMC</p>
           </div>
           
           <!-- Description -->
-          <p class="max-w-96 text-lg mt-4 ">Coding, Creating, and Experiment 💻✨</p> 
-          <p class="max-w-96 text-sm mt-2 ">berbagi hasil eksperimenku di dunia Minecraft dan proyek coding lainnya. </p>
-          <p class="max-w-96 text-sm mt-2 ">Let's build something fun! Eheh.. >w<</p>
+          <p class="mt-4 text-lg max-w-96">Coding, Creating, and Experiment 💻✨</p> 
+          <p class="mt-2 text-sm max-w-96">berbagi hasil eksperimenku di dunia Minecraft dan proyek coding lainnya. </p>
+          <p class="mt-2 text-sm max-w-96">Let's build something fun! Eheh.. >w<</p>
         </section>
 
         <!-- section scroll : Media -->
-        <section id="media" class="content-transition section-items grid gap-2 min-w-96 px-4 py-6 opacity-100">
+        <section id="media" class="grid gap-2 px-4 py-6 opacity-100 content-transition section-items min-w-96">
           
           <!-- link media : Youtube -->
-          <a href="https://www.youtube.com/@Nexdy_MC" class="h-16 p-4 text-center text-lg border-2 border-blue-600 rounded-lg bg-blue-600/20 duration-300 hover:bg-blue-600/60 hover:backdrop-blur" target="_blank">Youtube</a>
+          <a href="https://www.youtube.com/@Nexdy_MC" class="p-4 h-16 text-lg text-center rounded-lg border-2 border-blue-600 duration-300 bg-blue-600/20 hover:bg-blue-600/60 hover:backdrop-blur" target="_blank">Youtube</a>
           
           <!-- link media : Tiktok -->
-          <a href="https://www.tiktok.com/@wincraftmc?" class="h-16 p-4 text-center text-lg border-2 border-blue-600 rounded-lg bg-blue-600/20 duration-300 hover:bg-blue-600/60 hover:backdrop-blur" target="_blank">Tiktok</a>
+          <a href="https://www.tiktok.com/@wincraftmc?" class="p-4 h-16 text-lg text-center rounded-lg border-2 border-blue-600 duration-300 bg-blue-600/20 hover:bg-blue-600/60 hover:backdrop-blur" target="_blank">Tiktok</a>
           
           <!-- link media : Instagram -->
-          <a href="https://www.instagram.com/nexdy_mc" class="h-16 p-4 text-center text-lg border-2 border-blue-600 rounded-lg bg-blue-600/20 duration-300 hover:bg-blue-600/60 hover:backdrop-blur" target="_blank">Instagram</a>
+          <a href="https://www.instagram.com/nexdy_mc" class="p-4 h-16 text-lg text-center rounded-lg border-2 border-blue-600 duration-300 bg-blue-600/20 hover:bg-blue-600/60 hover:backdrop-blur" target="_blank">Instagram</a>
           
           <!-- link media : Github -->
-          <a href="https://www.github.com/nexdymc" class="h-16 p-4 text-center text-lg border-2 border-blue-600 rounded-lg bg-blue-600/20 duration-300 hover:bg-blue-600/60 hover:backdrop-blur" target="_blank">Github</a>
+          <a href="https://www.github.com/nexdymc" class="p-4 h-16 text-lg text-center rounded-lg border-2 border-blue-600 duration-300 bg-blue-600/20 hover:bg-blue-600/60 hover:backdrop-blur" target="_blank">Github</a>
 
         </section>
       
         <!-- section scroll : My Project -->
-        <section id="my-project" class="content-transition gap-4 grid grid-cols-2 grid-rows-none section-items min-w-96 max-h-[400px] px-4 py-6 opacity-100 overflow-auto">
-          
-          <!-- link project : Cek Server MC -->
-          <a href="#" class="grid p-2 justify-items-center bg-blue-600/20 border-2 border-blue-600 rounded-lg overflow-hidden backdrop-blur duration-300 hover:scale-105 active:scale-100">
-            <img src="image/web_1.png" alt="" class="my-4" width="90" >
-            <p class="text-md text-left ml-2 mb-2">Cek Server MC</p>
-          </a>
-          
-          <!-- link project : Kalkulator Rp -->
-          <a href="#" class="grid p-2 justify-items-center bg-blue-600/20 border-2 border-blue-600 rounded-lg overflow-hidden backdrop-blur duration-300 hover:scale-105 active:scale-100">
-            <img src="image/icon.png" alt="" class="my-4" width="90" >
-            <p class="text-md text-left ml-2 mb-2">Kalkulator Rp</p>
-          </a>
-          
-          <!-- link project : Memori Phone -->
-          <a href="#" class="grid p-2 justify-items-center bg-blue-600/20 border-2 border-blue-600 rounded-lg overflow-hidden backdrop-blur duration-300 hover:scale-105 active:scale-100">
-            <img src="image/icon.png" alt="" class="my-4" width="90" >
-            <p class="text-md text-left ml-2 mb-2">Memori Phone</p>
-          </a>
-          
-          <!-- link project : Alphabet -->
-          <a href="#" class="grid p-2 justify-items-center bg-blue-600/20 border-2 border-blue-600 rounded-lg overflow-hidden backdrop-blur duration-300 hover:scale-105 active:scale-100">
-            <img src="image/icon.png" alt="" class="my-4" width="90" >
-            <p class="text-md text-left ml-2 mb-2">Alphabet</p>
-          </a>
+        <section id="my-project" class="content-transition grid-rows-none section-items min-w-96 max-h-[400px] px-4 py-6 opacity-100 overflow-auto">
+          <div class="grid grid-cols-1 gap-4">
 
+            <!-- link project : Tap Tap Kuy -->
+            <a href="taptap-nxyz.vercel.app" class="grid overflow-hidden p-2 rounded-lg border-2 border-blue-600 backdrop-blur duration-300 justify-items-left bg-blue-600/20 hover:scale-105 active:scale-100">
+              <img src="image/web_4.png" alt="" class="my-4 w-full h-48 bg-[100px]" >
+              <p class="mb-2 ml-2 text-left text-md">Tap Tap Kuy</p>
+            </a>
+            
+            <!-- link project : Kalkulator Rp -->
+            <a href="calculator-rp-lake.vercel.app" class="grid overflow-hidden p-2 rounded-lg border-2 border-blue-600 backdrop-blur duration-300 justify-items-left bg-blue-600/20 hover:scale-105 active:scale-100">
+              <img src="image/web_5.png" alt="" class="my-4 w-full h-48">
+              <p class="mb-2 ml-2 text-left text-md">Memory Number Phone</p>
+            </a>
+            
+            <!-- link project : Memori Phone -->
+            <a href="memory-phone.netlify.app" class="grid overflow-hidden p-2 rounded-lg border-2 border-blue-600 backdrop-blur duration-300 justify-items-left bg-blue-600/20 hover:scale-105 active:scale-100">
+              <img src="image/web_2.png" alt="" class="my-4 w-full h-48">
+              <p class="mb-2 ml-2 text-left text-md">SakuraType</p>
+            </a>
+            
+            <!-- link project : NotePad -->
+            <a href="github.com/NexdyMC/Notepad-Web" class="grid overflow-hidden p-2 rounded-lg border-2 border-blue-600 backdrop-blur duration-300 justify-items-left bg-blue-600/20 hover:scale-105 active:scale-100">
+              <img src="image/web_6.png" alt="" class="my-4 w-full h-48">
+              <p class="mb-2 ml-2 text-left text-md">NotePad</p>
+            </a>
+            
+            <!-- link project : Location Structure Minecraft -->
+            <!-- <a href="github.com/NexdyMC/Location-Structure-Minecraft" class="grid overflow-hidden p-2 rounded-lg border-2 border-blue-600 backdrop-blur duration-300 justify-items-left bg-blue-600/20 hover:scale-105 active:scale-100">
+              <img src="image/web_6.png" alt="" class="my-4 w-full h-48">
+              <p class="mb-2 ml-2 text-left text-md">Location Structure Minecraft</p>
+            </a> -->
+          </div>
         </section>
       </div>
       
       <!-- main : footer -->
-      <footer class="bg-gray-600/20 duration-300 p-2">
-        <a href="#" id="github" class="text-white text-2xl hover:text-blue-300" target="_blank" ><i class="bx bxl-github"></i></a>
-        <p class="text-sm "> V2.0 &copy;NexdyMC 2024</p>
+      <footer class="py-4 duration-300 bg-gray-600/20">
+        <a href="#" id="github" class="text-2xl text-white hover:text-blue-300" target="_blank" ><i class="bx bxl-github"></i></a>
+        <p class="text-sm"> V2.1 &copy; NexdyMC 2026</p>
       </footer>
     
     </main>
